@@ -19,7 +19,7 @@ db_filename = './data/monitor_data.db'
 
 def headings():
     print()
-    print(f'{"Name":<10}|{"Serial #":<18}|'
+    print(f'{"Name":<15}|{"Serial #":<18}|'
           f'{"MAC":<20}|{"Created at":<28}|'
           f'{"CPU Temp":>8}|{"GPU Temp":>8}|'
           f'{"CPU Load":>8}'
