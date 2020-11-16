@@ -49,7 +49,7 @@ def main(_delay):
 
         last_readings = session.query(CPU).order_by(CPU.id.desc()).first()
 
-        if counter % 10 == 0:
+        if counter % 5 == 0:
             headings()
         counter += 1
 
