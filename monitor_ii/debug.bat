@@ -1,3 +1,4 @@
+set FLASK_APP=app.py
 set FLASK_ENV=development
-flask run --port=5555
+python -m flask run --port=5555
 

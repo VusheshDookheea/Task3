@@ -65,15 +65,15 @@ def cpu_load(qty=1):
         qty = 1
     active_session = session()
     cpu = active_session.query(CPU).order_by(CPU.created_at.desc()).first()
-    data = {cpu.id:{
-        'created_at':cpu.created_at,
-        'host_mac':cpu.host_mac,
-        'cpu_temp':cpu.cpu_temp,
-        'gpu_temp':cpu.gpu_temp,
-        'host_name':cpu.host_name,
-        'id':cpu.id,
-        'load':cpu.load,
-        'serial':cpu.serial,
+    data = {cpu.id: {
+        'created_at': cpu.created_at,
+        'host_mac': cpu.host_mac,
+        'cpu_temp': cpu.cpu_temp,
+        'gpu_temp': cpu.gpu_temp,
+        'host_name': cpu.host_name,
+        'id': cpu.id,
+        'load': cpu.load,
+        'serial': cpu.serial,
     }}
     return jsonify(data)
 
@@ -81,6 +81,38 @@ def cpu_load(qty=1):
 @app.route('/api/cpu-load')
 def cpu_load_latest():
     return cpu_load(1)
+
+
+@app.route("/api/environment")
+def get_api_environment():
+    return {"error": "environment note implemented",
+            "temperature": None,
+            "pressure": None,
+            "humidity": None}
+
+
+@app.route("/api/temperature")
+def get_api_temperature():
+    return {"error": "environment note implemented",
+            "temperature": None,
+            "pressure": None,
+            "humidity": None}
+
+
+@app.route("/api/pressure")
+def get_api_pressure():
+    return {"error": "environment note implemented",
+            "temperature": None,
+            "pressure": None,
+            "humidity": None}
+
+
+@app.route("/api/humidity")
+def get_api_humidity():
+    return {"error": "environment note implemented",
+            "temperature": None,
+            "pressure": None,
+            "humidity": None}
 
 
 if __name__ == '__main__':
