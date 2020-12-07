@@ -1,5 +1,5 @@
 from flask import Flask, render_template, jsonify
-from db import CPU, Storage, Base
+from db import CPU, Storage, Base, EnvironmentTPH
 from flask_cors import CORS
 
 from sqlalchemy import create_engine, select

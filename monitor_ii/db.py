@@ -46,7 +46,7 @@ class Storage(Base):
         self.used_storage = None
 
 
-class Environment(Base):
+class EnvironmentTPH(Base):
     __tablename__ = 'tph_storage'
     id = Column(Integer, primary_key = True)
     device_name = Column(String)
